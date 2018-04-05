@@ -73,7 +73,9 @@ $(".search").submit(function(event) {
 	event.preventDefault();
 	var keyword = $("#trigger").val();
 	if (keyword !== "") {
-		storeStreams.push(keyword);
+		if (storeStreams.indexOf(keyword) == -1) {
+			storeStreams.push(keyword);
+		}
 		$("#streamers").html("");
 		getInfo(state);
 	}
