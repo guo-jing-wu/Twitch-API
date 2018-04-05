@@ -59,10 +59,14 @@ body {
 			margin-left: 5px;
 		}
 		input[type="search"] {
+			width: 90%;
 			border: none;
 			outline: none;
 			&:active {
 				top: 0%;
+			}
+			@media screen and (max-width: 990px) {
+				width: 97%;
 			}
 		}
 		input[type="submit"] {
